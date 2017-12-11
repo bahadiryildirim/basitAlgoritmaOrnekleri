@@ -1,0 +1,32 @@
+<html>                                                                    //Belirlenen sınıra kadar sayıların faktöriyelini hesaplama
+    <head>
+    <meta charset="UTF-8">
+    </head>
+    <body>
+        <table border="1">
+            
+           <script>
+                var sinir=prompt("Lütfen sınırı belirtiniz");             //Kullanıcıdan sınır verisi alınıyor.
+                
+                function fact(a){                                         //Faktöriyel hesaplamak için yazılan foksiyon.
+                    var carpim=1;
+                       if(a==0){                                          //Sıfırın faktöriyelini hesaplamak için yazılan if.
+                          return 1;
+                        }
+                         else{
+                            for(j=1;j<=a;j++){
+                                carpim=carpim*j;
+                            }
+                         return carpim;
+                         }
+                }
+
+                for(i=0;i<=sinir;i++){                                    //sınırın kullanıldığı ve satır, sütunların oluşturulduğu for.
+                    document.write("<tr><td>"+i+"</td><td>"+fact(i)+"</td></tr>");
+                 }
+
+            </script>
+       
+        </table>
+    </body>
+</html>
