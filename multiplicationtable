@@ -1,0 +1,38 @@
+<html>
+    <head>
+    <meta charset="UTF-8">
+    </head>
+    <body>
+        <table border="2" cellspacing="5" cellpadding="5" bordercolor="red">
+            
+            <script>
+                for(i=0;i<10;i++){                                              // Satırların oluşturulduğu for döngüsü
+
+                    document.write("<tr>");
+
+                    if(i==0){                                                   // Sıfır için özel durum
+                        for(j=0;j<10;j++){
+                            document.write('<td bgcolor="blue">'+j+'</td>');
+                        }
+
+                        document.write("</tr>")
+                    }
+                    else {
+
+                        for(j=0;j<10;j++){                                      // Sütunların oluşturulduğu for döngüsü
+                            if(j==0){                                           // Sıfır için özel durum
+                                document.write('<td bgcolor="blue">'+i+'</td>');
+                            }
+                            else{
+                                document.write("<td>"+i*j+"</td>");
+                            }
+                        }
+                    document.write("</tr>")
+                    }
+                }
+
+            </script>
+       
+        </table>
+    </body>
+</html>
